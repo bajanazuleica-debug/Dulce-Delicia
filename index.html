@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dulce Delicia - Postres y Dulces</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #fff7fb, #f9ecf3, #fff7fb);
+      color: #1a1a1a;
+    }
+
+    /* ENCABEZADO */
+    header {
+      background: linear-gradient(135deg, #f8b8d0, #bba0e2);
+      color: #1a1a1a;
+      text-align: center;
+      padding: 80px 20px;
+      animation: fadeIn 1.5s ease-in-out;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 3em;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #1a1a1a;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    header p {
+      font-size: 1.3em;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #1a1a1a;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin-top: 25px;
+      transition: all 0.4s ease;
+    }
+    .btn:hover {
+      background: #bba0e2;
+      color: #1a1a1a;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* MENÚ */
+    nav {
+      background-color: #1a1a1a;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      padding: 15px 25px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #bba0e2;
+      color: #1a1a1a;
+      border-radius: 10px;
+    }
+
+    /* SECCIONES */
+    section {
+      padding: 70px 25px;
+      text-align: center;
+    }
+    section h2 {
+      color: #bba0e2;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      font-weight: 700;
+      animation: fadeIn 1.2s ease;
+    }
+
+    /* SLIDER */
+    .slider {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slide 15s infinite;
+    }
+    .slides img { width: 100%; }
+    @keyframes slide {
+      0%, 10% { transform: translateX(0); }
+      35%, 45% { transform: translateX(-100%); }
+      70%, 80% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+
+    /* GALERÍA DE POSTRES */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .gallery-item {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border: 3px solid #f8b8d0;
+    }
+    .gallery-item:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      border-color: #bba0e2;
+    }
+    .gallery-item img {
+      width: 100%;
+      transition: transform 0.5s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .gallery-item h3 {
+      color: #bba0e2;
+      margin: 12px 0;
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+    .gallery-item p {
+      padding: 0 15px 15px;
+      font-size: 1em;
+      color: #333;
+    }
+    .price {
+      font-weight: bold;
+      color: #1a1a1a;
+    }
+
+    /* CONTACTO */
+    .social a {
+      background-color: #1a1a1a;
+      color: white;
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      line-height: 45px;
+      font-size: 20px;
+      margin: 0 10px;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    .social a:hover {
+      transform: rotate(10deg) scale(1.2);
+      background-color: #bba0e2;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.95em;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      nav a { padding: 10px; }
+    }
+  </style>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Dulce Delicia</h1>
+    <p>“Endulza tu día con un momento irresistible.”💜🍰</p>
+    <a href="#postres" class="btn">Descubrir Postres</a>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#postres">Postres</a>
+    <a href="#promociones">Promociones</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <!-- SLIDER DE PROMOCIONES -->
+  <section id="promociones">
+    <div class="slider">
+      <div class="slides">
+        <img src="img/brownie.jpg" alt="Promoción 1">
+        <img src="img/cupcake.jpg" alt="Promoción 2">
+        <img src="img/tarta.jpg" alt="Promoción 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA DE POSTRES -->
+  <section id="postres">
+    <h2>Nuestros Postres</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="img/cupcake.jpg" alt="Cupcake de Chocolate">
+        <h3>Cupcake de Chocolate</h3>
+        <p>Esponjoso y suave con chispas dulces, los 12 cupcakes a tan solo. <span class="price">$27.00</span></p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/tarta.jpg" alt="Tarta de Fresas">
+        <h3>Tarta de Fresas</h3>
+        <p> Una base de masa quebrada, masa sablée o, en algunas variantes, bizcocho ligero (como el angel food cake), que aporta una textura crujiente o esponjosa.
+Relleno/Cubierta: El elemento principal son las fresas frescas, que pueden ir solas o combinadas con crema pastelera (como en la "tarta fraisier" francesa), nata montada o mermelada de fresa. <span class="price">$35.00</span></p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/macarrons.jpg" alt="Macarons">
+        <h3>Macarons Franceses</h3>
+        <p> El sabor es equilibrado, con notas a nuez por las almendras, y la dulzura se compensa con el sabor del relleno, que puede variar desde chocolate hasta fruta de la pasión, frambuesa, limón, y más. <span class="price">$2.10</span></p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/brownie.jpg" alt="Brownie">
+        <h3>Brownie de Chocolate</h3>
+        <p>El sabor principal es a chocolate intenso, el cual se equilibra con la dulzura. Su perfil puede variar según el tipo y porcentaje de cacao utilizado. <span class="price">$3.00</span></p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/cheescake.jpg" alt="Cheesecake">
+        <h3>Cheesecake de Maracuyá</h3>
+        <p> La textura final es suave, cremosa y compacta, con una capa crujiente de galleta en la base y una salsa brillante en la superficie. <span class="price">$24.50</span></p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/galletas.jpg" alt="Galletas">
+        <h3>Galletas Decoradas</h3>
+        <p>Son horneados dulces que se caracterizan por una masa de sabor a mantequilla o vainilla, con trozos de chocolate semidulce o de leche. <span class="price">$1.50 y $3.00</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <p>Email: candelarionathalys@gmail.com</p>
+    <p>Teléfono: 0967284590</p>
+    <p>Dirección: banife, 25 de Diciembre- Isidoro Carchi Ecuador</p>
+    <div class="social">
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Dulce Delicia. Hecho con 💜 por Nathalys.
+  </footer>
+
+</body>
+</html>
